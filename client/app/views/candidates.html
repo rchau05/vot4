@@ -1,0 +1,36 @@
+
+<ul class="nav nav-pills pull-right">
+	<li class="active"><a ng-href="#">Home</a></li>
+	<li><a ng-href="#/candidate">Candidate</a></li>
+</ul>
+
+<a class="btn btn-success" href="/#/create/candidate"><span class="glyphicon-plus"></span>Create Candidate</a>
+<br>
+
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Party</th>
+		<th>Votes</th>
+		<th>Operations</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="candidate in candidates">
+			<td><a href="/#/candidate/{{candidate._id}}">{{candidate.name}}</a></td>
+			<td>{{candidate.party}}</td>
+			<td>{{candidate.votes}}</td>
+			<td>
+				<div class="button-group">
+					<a ng-href="/#/candidate/{{candidate._id}}/edit" class="btn btn-success">
+						<span class="glyphicon glyphicon-edit"></span>
+					</a>
+					<a ng-href="/#/candidate/{{candidate._id}}/delete" class="btn btn-danger">
+						<span class="glyphicon glyphicon-remove-circle"></span>
+					</a>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
