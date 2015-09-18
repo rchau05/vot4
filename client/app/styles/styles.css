@@ -5,51 +5,64 @@ a{
   color:black;
 }
 
-h5{
+h4{
   text-align: center;
 }
 
-.logo{
-  height:50px;
-  left: 3em;
-  z-index: -1;
-  position: absolute;
-}
-
 .navbar-brand{
-  color: blue;
+  color: white;
   font-family: 'Shadows Into Light', cursive;
   font-weight: bolder;
   font-size: 2.5em;
-  background-color: rgba(0,0,0,.4);
+  background-color: #3C3A6E;
+  position: absolute;
+  left: 0;
+  padding-left: 2em;
 }
 
-.navbar>.container-fluid .navbar-brand {
-    margin-left: 1em;
-}
-
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: #3C3B6D;
   color: white;
 }
-.navbar-default .navbar-nav>li>a:hover{
-  color: #FF8B71;
+
+.navbar-default .navbar-nav > .active > a:hover{
+  color: #B22034!important;
 }
 
-.navbar-header .navbar-brand {
+.navbar-header .navbar-brand{
   color: white;
 }
+
 .navbar-header .navbar-brand:hover{
   color: #B22034;
 }
 
 .navbar{
   background-color: #3C3B6D;
+  height: 4em;
+}
+
+.navbar-nav{
+  padding-right: 3em;
+  position: absolute;
+  right: 0;
+  z-index: +1;
 }
 
 .jumbotron{
   bottom: 1.4em!important;
   padding: 0;
   position: relative;
+}
+
+.row{
+  position: relative;
+  top: 3em;
+}
+
+.statement{
+  font-weight: bolder;
+  margin-top: 5em;
 }
 
 #splash-photo{
@@ -60,6 +73,11 @@ h5{
 }
 
 /*ELECTION*/
+.ballot{
+  position: relative;
+  top: -2em;
+}
+
 .cand-pics{
   height: 175px;
   width: 175px;
@@ -93,8 +111,15 @@ h5{
 }
 
 /*ELECTION RESULTS*/
+path{
+  position: absolute;
+  bottom: 40em;
+}
+
 g{
   font-weight: bolder;
+  position: absolute;
+  bottom: 10em;
 }
 
 text{
@@ -251,7 +276,7 @@ a{
 }
 
 
-.pnx-msg-icon, .img-icon {
+.img-icon {
     width: 200px;
     height: 200px;
     border-radius: 150px;
@@ -276,7 +301,7 @@ a{
     background-color: #B22134;
     bottom: 0;
     width: 100%;
-    height: 7em;
+    height: 6em;
     margin: 0;
 }
 

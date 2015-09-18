@@ -1,123 +1,41 @@
-// /*
-//  * CONTROLLERS
-//  */
+angular.module('clientApp')
 
-// 'use strict';
+.controller('ResultsCtrl', ['$scope', function ($scope) {
+	$scope.chartObject = {};
+    
+    $scope.chartObject.type = "PieChart";
+    
+    $scope.onions = [
+        {v: "Bernie Sanders"},
+        {v: 35},
+    ];
 
-//   .controller('ResultsCtrl', ['$scope', function ($scope) {
-//   $scope.chartObject = {
-//   "type": "PieChart",
-//   "displayed": false,
-//   "data": {
-//     "cols": [
-//       {
-//         "id": "month",
-//         "label": "Month",
-//         "type": "string",
-//         "p": {}
-//       },
-//       {
-//         "id": "laptop-id",
-//         "label": "Laptop",
-//         "type": "number",
-//         "p": {}
-//       },
-//       {
-//         "id": "desktop-id",
-//         "label": "Desktop",
-//         "type": "number",
-//         "p": {}
-//       },
-//       {
-//         "id": "server-id",
-//         "label": "Server",
-//         "type": "number",
-//         "p": {}
-//       },
-//       {
-//         "id": "cost-id",
-//         "label": "Shipping",
-//         "type": "number"
-//       }
-//     ],
-//     "rows": [
-//       {
-//         "c": [
-//           {
-//             "v": "January"
-//           },
-//           {
-//             "v": 19,
-//             "f": "42 items"
-//           },
-//           {
-//             "v": 12,
-//             "f": "Ony 12 items"
-//           },
-//           {
-//             "v": 7,
-//             "f": "7 servers"
-//           },
-//           {
-//             "v": 4
-//           }
-//         ]
-//       },
-//       {
-//         "c": [
-//           {
-//             "v": "February"
-//           },
-//           {
-//             "v": 13
-//           },
-//           {
-//             "v": 1,
-//             "f": "1 unit (Out of stock this month)"
-//           },
-//           {
-//             "v": 12
-//           },
-//           {
-//             "v": 2
-//           }
-//         ]
-//       },
-//       {
-//         "c": [
-//           {
-//             "v": "March"
-//           },
-//           {
-//             "v": 24
-//           },
-//           {
-//             "v": 5
-//           },
-//           {
-//             "v": 11
-//           },
-//           {
-//             "v": 6
-//           }
-//         ]
-//       }
-//     ]
-//   },
-//   "options": {
-//     "title": "Sales per month",
-//     "isStacked": "true",
-//     "fill": 20,
-//     "displayExactValues": true,
-//     "vAxis": {
-//       "title": "Sales unit",
-//       "gridlines": {
-//         "count": 10
-//       }
-//     },
-//     "hAxis": {
-//       "title": "Date"
-//     }
-//   },
-//   "formatters": {}
-// }
+    $scope.chartObject.data = {"cols": [
+        {id: "t", label: "Topping", type: "string"},
+        {id: "s", label: "Slices", type: "number"}
+    ], "rows": [
+        {c: [
+            {v: "Hillary Clinton"},
+            {v: 28},
+        ]},
+        {c: $scope.onions},
+        {c: [
+            {v: "Jill Stein"},
+            {v: 27}
+        ]},
+        {c: [
+            {v: "Jeb Bush"},
+            {v: 10},
+        ]},
+        {c: [
+            {v: "Donald Trump"},
+            {v: 2},
+        ]}
+    ]};
+
+    $scope.chartObject.options = {
+        'title': 'Youth Vote Presidential Results'
+    };
+
+    console.log('scope object', $scope.chartObject)
+  }]);

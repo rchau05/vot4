@@ -1,0 +1,31 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <legend>Signup</legend>
+  <form ng-submit="signup()">
+    <!-- username -->
+    <div class="form-group">
+      <label for="exampleInputUsernamel1" ng-model="user.username">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Username">
+    </div>
+    <!-- email -->
+    <div class="form-group">
+      <label for="email" ng-model="user.email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Email">
+    </div>
+    <!-- date of birth -->
+    <div class="form-group">
+      <label for="DOB" ng-model="user.dob">Date of Birth</label>
+      <input type="date" class="form-control" id="DOB" placeholder="MM/DD/YYYY">
+    </div>
+    <!-- password -->
+    <div class="form-group">
+      <label for="Password" ng-model="user.password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <!-- confirm password -->
+    <div class="form-group">
+      <label for="Password" ng-model="user.password_confirm">Confirm Password </label>
+      <input type="password" class="form-control" id="password" placeholder="Confirm Password">
+    </div>
+    <button type="submit" action="post" class="btn btn-success">Submit</button>
+  </form>
+</div>

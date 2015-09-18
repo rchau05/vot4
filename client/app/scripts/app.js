@@ -11,7 +11,8 @@
 angular
   .module('clientApp', [
     'ngRoute',
-    'restangular'
+    'restangular',
+    "googlechart"
   ])
   .config(function ($routeProvider, RestangularProvider) {
 
@@ -62,6 +63,16 @@ angular
         templateUrl:'views/results.html',
         controller: 'ResultsCtrl',
         controllerAs: 'results'
+      })
+      .when('/signup', {
+        templateUrl:'views/signup.html',
+        controller: 'SignupCtrl',
+        controllerAs: 'signup'
+      })
+      .when('/login', {
+        templateUrl:'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
       })
       .otherwise({
         redirectTo: '/'
