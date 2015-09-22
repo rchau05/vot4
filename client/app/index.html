@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="clientApp">
   <head>
     <meta charset="utf-8">
     <title>Vot4</title>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="clientApp">
+  <body ng-controller='MainCtrl'>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -47,7 +47,6 @@
       </div>
 
     <div ng-view=""></div>
-
     <div class="footer">
           <div class="social-network social-circle">
       <div id="connect-message">Connect With Us!
@@ -61,18 +60,6 @@
             <a href="https://www.reddit.com" class="social-popout"><img src="http://bradsknutson.com/wp-content/themes/bradsknutson/images/reddit-48circle.png" /></a>
     </div>
     </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -98,6 +85,7 @@
     <script src="scripts/controllers/candidate-edit.js"></script>
     <script src="scripts/controllers/election.js"></script>
     <script src="scripts/controllers/results.js"></script>
+    <script src="scripts/controllers/poll.js"></script>
       <!-- endbuild -->
 
 </body>

@@ -74,6 +74,21 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/polls', {
+        templateUrl:'views/list.html',
+        controller: 'PollListCtrl',
+        controllerAs: 'polls'
+      })
+      .when('/poll/:pollId', {
+        templateUrl:'views/item.html',
+        controller: 'PollItemCtrl',
+        controllerAs: 'poll'
+      })
+      .when('/new', {
+        templateUrl:'views/new.html',
+        controller: 'PollNewCtrl',
+        controllerAs: 'new'
+      })
       .otherwise({
         redirectTo: '/'
       });
