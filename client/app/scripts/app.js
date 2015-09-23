@@ -12,7 +12,8 @@ angular
   .module('clientApp', [
     'ngRoute',
     'restangular',
-    "googlechart"
+    'googlechart',
+    'pollServices'
   ])
   .config(function ($routeProvider, RestangularProvider) {
 

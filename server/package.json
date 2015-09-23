@@ -13,6 +13,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
+    "mongodb": "^2.0.43",
     "mongoose": "^4.1.7",
     "node-restful": "^0.2.2"
   }
